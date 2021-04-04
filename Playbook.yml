@@ -9,9 +9,9 @@
     service: name=docker state=started
   - name: install git
     yum: name=git state=present
-  - name: clone repo from github
-    git: repo=https://github.com/edureka-devops/projCert.git dest=/tmp/gitrepo
-  - name: build dockerfile
-    command: chdir=/tmp/gitrepo docker build -t deploy_myimage:ansible .
-  - name: run the dockerfile
-    command: docker run -itd -P deploy_myimage:ansible
+  - name: clone the repo from github
+    git: repo=https://github.com/Blessing-123/projCert.git dest=/tmp/gitrepo
+  -name: pull docker image
+     image: devopsedu/webapp
+     pull: true
+   command: docker run -itd -P deployimage:ansible
