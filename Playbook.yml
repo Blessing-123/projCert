@@ -11,3 +11,7 @@
     yum: name=git state=present
   - name: clone the repo from github
     git: repo=https://github.com/Blessing-123/projCert.git dest=/tmp/gitrepo
+  - name: building docker image
+    command: docker build -t devopsedu/webapp image .
+    args:
+    chdir: /usr/bin/docker
