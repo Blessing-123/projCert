@@ -15,3 +15,5 @@
     command: docker build -t devopsedu/webapp image .
     args:
     chdir: /tmp/gitrepo
+  - name: create container
+    command: docker run -d --name devopsedu/webapp-container -p 8080:8080 devopsedu/webapp
