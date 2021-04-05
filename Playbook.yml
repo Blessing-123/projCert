@@ -14,4 +14,4 @@
   -name: pull docker image
      image: devopsedu/webapp
      pull: true
-   command: docker run -itd -P deployimage:ansible
+   
