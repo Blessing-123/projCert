@@ -11,7 +11,11 @@
     yum: name=git state=present
   - name: clone the repo from github
     git: repo=https://github.com/Blessing-123/projCert.git dest=/tmp/gitrepo
-  -name: pull docker image
-     image: devopsedu/webapp
-     pull: true
-   
+  - name: Running the container
+          docker_container:
+            image: devopsedu/webapp
+            path: docker
+            state: running
+            
+        - name: Check if container is running
+          shell: docker ps
