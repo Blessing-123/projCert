@@ -14,4 +14,4 @@
   - name: building docker image
     command: docker build -t devopsedu/webapp image .
     args:
-    chdir: /usr/bin/docker
+    chdir: /opt/docker
