@@ -12,4 +12,4 @@
   - name: clone the repo from github
     git: repo=https://github.com/Blessing-123/projCert.git dest=/tmp/gitrepo
   - name: create container
-    command: docker run -itd --name c5 -P devopsedu/webapp
+    command: docker run -itd --name b1 -P devopsedu/webapp
